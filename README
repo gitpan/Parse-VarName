@@ -1,0 +1,40 @@
+NAME
+    Parse::VarName - Routines to parse variable name
+
+VERSION
+    version 0.01
+
+DESCRIPTION
+    This module has Rinci metadata.
+
+FUNCTIONS
+    None are exported by default, but they are exportable.
+
+  split_varname_words(%args) -> any
+    Split words found in variable name.
+
+    Try to split words found in a variable name, e.g. mTime -> [m, Time],
+    foo1Bar -> [foo, 1, Bar], Foo::barBaz::Qux2 -> [Foo, bar, Baz, Qux, 2].
+
+    Arguments ('*' denotes required arguments):
+
+    *   include_sep => *bool* (default: 0)
+
+        Whether to include non-alphanum separator in result.
+
+        For example, under include_sep=true, Foo::barBaz::Qux2 -> [Foo, ::,
+        bar, Baz, ::, Qux, 2].
+
+    *   varname* => *str*
+
+    Return value:
+
+AUTHOR
+    Steven Haryanto <stevenharyanto@gmail.com>
+
+COPYRIGHT AND LICENSE
+    This software is copyright (c) 2012 by Steven Haryanto.
+
+    This is free software; you can redistribute it and/or modify it under
+    the same terms as the Perl 5 programming language system itself.
+
